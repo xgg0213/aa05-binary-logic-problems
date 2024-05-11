@@ -1,9 +1,13 @@
 // Convert the integers in the console.logs below to base 10:
 
 /******************************************************************************/
+// parseInt();
+// toString();
 
 const convertToBase10 = str => {
   // Your code here 
+  if (str.includes('0b')) return parseInt(str.substring(2), 2);
+  if (str.includes('0x')) return parseInt(str.substring(2), 16);
 };
 
 /******************************************************************************/
