@@ -7,7 +7,20 @@ const addZeros = require('../utils/addZeros');
 /******************************************************************************/
 
 const asciiTo8bit = str => {
-  // Your code here 
+  let result = "";
+
+  for (i = 0; i < str.length; i++) {
+
+    let decimal = str.charCodeAt(i); // converts from ASCII to decimal
+
+    let binary = decimal.toString(2); // converts from decimal to binary
+
+    let bit8 = addZeros(binary, 8); // converts from binary to 8-bit
+
+    result += bit8; // adds 8-bit elements together
+  }
+
+  return result;
 };
 
 /******************************************************************************/
