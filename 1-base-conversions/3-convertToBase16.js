@@ -4,6 +4,9 @@
 
 const convertToBase16 = element => {
   // Your code here 
+  if (typeof element === 'number') return '0x' + element.toString(16);
+  let decimal = parseInt(element.substring(2), 2);
+  return '0x' + decimal.toString(16);
 };
 
 /******************************************************************************/
