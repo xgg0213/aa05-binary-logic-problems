@@ -23,7 +23,20 @@ const binaryStringToArray = str => {
 
 const binaryToAscii = str => {
   // Your code here 
+  let arr = binaryStringToArray(str);
+  let newStr = '';
+
+  for (let i = 0; i < arr.length; i++) {
+    let decimal = parseInt(arr[i], 2); // can convert directly from 8-bits to decimal, exacly the same as converting from binary to decimal;
+    let asc = String.fromCharCode(decimal);
+    newStr += asc;
+  }
+  return newStr;
 };
+
+// console.log(parseInt('01100001',2));
+// console.log('abc'.charCodeAt(0));
+
 
 /******************************************************************************/
 
